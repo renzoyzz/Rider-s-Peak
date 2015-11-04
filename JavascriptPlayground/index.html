@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<head>
+   <title></title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="cssCarousel.css" media="screen" title="no title" charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body onresize="bodyResize()" id="index">
+   <div id="full-site-wrapper">
+      <div id="all-top-bars">
+         <div class="container-fluid top-bar" id="top-bar">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <a href="index.html"><p>Shop</p></a>
+                     <a href="reviews.html"><p>Reviews</p></a>
+                     <a href="#"><p>Clips</p></a>
+                     <a href="#"><p>Hot Spots</p></a>
+                     <a href="signUp.html"><p>Sign Up</p></a>
+                     <p class="pull-right">(555)555-5555</p>
+                     <a href="#"><p class="pull-right"><span class="glyphicon glyphicon-comment"></span> Chat with us</p></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <nav>
+            <div class="container brand-bar" id="brand-bar">
+               <h1><span class="glyphicon glyphicon-leaf"></span>Rider's Peak</h1>
+               <div class="search-bar" id="search-bar" onclick="document.getElementById('search').focus(); return false;">
+                  <button type="button" name="button"><span class="glyphicon glyphicon-search"></span></button>
+                  <input id="search" type="text" name="name" value="" placeholder="Search gear, clothing, and more...">
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div class="container-fluid nav-dropdown-button" id="navDropDownButton">
+         <h3 onclick="navDropDown()"><span id="navDropButton" class="glyphicon glyphicon-chevron-down"></span></h3>
+         <div class="nav-dropdown-items">
+            <a href="index.html"><p><span class="glyphicon glyphicon-shopping-cart"></span> Shop</p></a>
+            <a href="reviews.html"><p><span class="glyphicon glyphicon-shopping-cart"></span> Reviews</p></a>
+            <a href="#"><p><span class="glyphicon glyphicon-shopping-cart"></span> Clips</p></a>
+            <a href="#"><p><span class="glyphicon glyphicon-shopping-cart"></span> Hot Spots</p></a>
+            <a href="#"><p><span class="glyphicon glyphicon-shopping-cart"></span> Sign Up</p></a>
+         </div>
+      </div>
+      <div class="js-outer-carousel-div" id="js-outer-carousel-div">
+         <div id="js-carousel-div" class="js-carousel">
+            <button type="button" id="0" onclick="carSwitch(this.id)"  class="js-carousel-buttons buttonOne" name="button"><span class="glyphicon glyphicon-chevron-left"></span></button>
+            <button type="button" id="1" onclick="carSwitch(this.id)" class="js-carousel-buttons buttonTwo" name="button"><span class="glyphicon glyphicon-chevron-right pull-left"></span></button>
+            <a href="#"><img class="carImg" src="http://72.47.235.94/~resqwater/wp-content/uploads/2013/09/Jake_Blauvelt_Naturally_Trailer_Snowboard_Video.jpg" alt="farLeft" style="z-index: 1" /></a>
+            <a href="#"><img class="carImg" src="http://cdn.coresites.factorymedia.com/whitelines_new/wp-content/uploads/2013/05/Snowboard-Wallpaper-Alvaro-Vogel-Montafon-1920x1080.jpg" alt="left" style="z-index: 1" /></a>
+            <video id="carVideo" muted="true" controls class="carImg" autoplay src="carVideo.webm" type="video/webm" loop="true"></video>
+            <a href="#"><img class="carImg" src="http://i.ytimg.com/vi/XLbut6CaDhk/maxresdefault.jpg" alt="right" style="z-index: 1"/></a>
+            <a href="#"><img class="carImg" src="http://snowbrains.com/wp-content/uploads/2014/01/url-2.jpeg" alt="farRight" style="z-index: 1" /></a>
+         </div>
+      </div>
+      <div class="main-category-container">
+         <div class="container container-categories">
+            <p class="categories" id="category-1" onclick="allMenus.menu(this.innerHTML)">Brands</p>
+            <p class="categories" id="category-2" onclick="allMenus.menu(this.innerHTML)">Men</p>
+            <p class="categories" id="category-3" onclick="allMenus.menu(this.innerHTML)">Women</p>
+            <p class="categories" id="category-4" onclick="allMenus.menu(this.innerHTML)">Kids</p>
+         </div>
+         <div class="brands-menu" id="brands-menu">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <h1><span id="category-banner"></span><span class="pull-right category-close" onclick="allMenus.collapseMenu()">&times;</span></h1>
+                  </div>
+                  <div class="col-xs-3 brand-menu">
+                     <h4>Brands</h4>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Burton</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Rome</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">NeverSummer</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Technine</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">LibTech</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">K2</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Ride</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">DC</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Forum</h6>
+                     <h6 onclick="allMenus.brand(this.innerHTML)">Rossignol</h6>
+                  </div>
+                  <div class="col-xs-3 main-menu">
+                     <div class="menu level-1">
+                        <h4>Products</h4>
+                        <h6 onclick="allMenus.product(this.innerHTML)">Snowboard</h6>
+                        <h6 onclick="allMenus.product(this.innerHTML)">Jackets</h6>
+                        <h6 onclick="allMenus.product(this.innerHTML)">Pants</h6>
+                        <h6 onclick="allMenus.product(this.innerHTML)">Boots</h6>
+                        <h6 onclick="allMenus.product(this.innerHTML)">Bindings</h6>
+                     </div>
+                  </div>
+                  <div class="col-xs-3 snowboard-menu">
+                     <div class="menu level-2">
+                        <h4>Snowboard</h4>
+                        <h6 onclick="allMenus.snowboards(this.innerHTML)">Type</h6>
+                        <h6>Price(Lowest to Highest)</h6>
+                        <h6>Price(Highest to Lowest)</h6>
+                        <h6 onclick="allMenus.snowboards(this.innerHTML)">Size</h6>
+                        <h6 onclick="allMenus.snowboards(this.innerHTML)">IsWide</h6>
+                     </div>
+                     <div class="menu level-2">
+                        <h4>Jackets</h4>
+                        <h6 onclick="allMenus.jackets(this.innerHTML)">Size</h6>
+                        <h6>Price(Lowest to Highest)</h6>
+                        <h6>Price(Highest to Lowest)</h6>
+                        <h6 onclick="allMenus.jackets(this.innerHTML)">Warmth</h6>
+                        <h6 onclick="allMenus.jackets(this.innerHTML)">WaterProofing</h6>
+                     </div>
+                     <div class="menu level-2">
+                        <h4>Pants</h4>
+                        <h6 onclick="allMenus.pants(this.innerHTML)">Size</h6>
+                        <h6>Price(Lowest to Highest)</h6>
+                        <h6>Price(Highest to Lowest)</h6>
+                        <h6 onclick="allMenus.pants(this.innerHTML)">Warmth</h6>
+                        <h6 onclick="allMenus.pants(this.innerHTML)">WaterProofing</h6>
+                     </div>
+                     <div class="menu level-2">
+                        <h4>Boots</h4>
+                        <h6 onclick="allMenus.boots(this.innerHTML)">Size</h6>
+                        <h6>Price(Lowest to Highest)</h6>
+                        <h6>Price(Highest to Lowest)</h6>
+                        <h6 onclick="allMenus.boots(this.innerHTML)">LaceType</h6>
+                        <h6 onclick="allMenus.boots(this.innerHTML)">Color</h6>
+                     </div>
+                     <div class="menu level-2">
+                        <h4>Bindings</h4>
+                        <h6 onclick="allMenus.bindings(this.innerHTML)">Size</h6>
+                        <h6>Price(Lowest to Highest)</h6>
+                        <h6>Price(Highest to Lowest)</h6>
+                        <h6 onclick="allMenus.bindings(this.innerHTML)">Type</h6>
+                        <h6 onclick="allMenus.bindings(this.innerHTML)">Color</h6>
+                     </div>
+                  </div>
+                  <div class="col-xs-3 snowboard-menu">
+                     <!--Snowboard Menu-->
+                     <div class="menu level-3">
+                        <h4>Size</h4>
+                        <h6 onclick='matchProduct(this.innerHTML)'>145-150cm</h6>
+                        <h6 onclick='matchProduct(this.innerHTML)'>150-155cm</h6>
+                        <h6 onclick='matchProduct(this.innerHTML)'>155-160cm</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>Type</h4>
+                        <h6 onclick='matchProduct(this.innerHTML)'>AllMountain</h6>
+                        <h6 onclick='matchProduct(this.innerHTML)'>Freestyle</h6>
+                        <h6 onclick='matchProduct(this.innerHTML)'>SplitBoard</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>Wide</h4>
+                        <h6 onclick='matchProduct(this.innerHTML)'>Normal</h6>
+                        <h6 onclick='matchProduct(this.innerHTML)'>Wide</h6>
+                     </div>
+                     <!--Jacket Menu and Pants Menu-->
+                     <div class="menu level-3">
+                        <h4>Size</h4>
+                        <h6>Small</h6>
+                        <h6>Medium</h6>
+                        <h6>Large</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>Warmth</h4>
+                        <h6>Warm 30 &deg F</h6>
+                        <h6>Wide</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>WaterProofing</h4>
+                        <h6>3,000-5,000mm</h6>
+                        <h6>8,000-10,000mm</h6>
+                        <h6>15,000-20,000mm</h6>
+                        <h6>25,000 and up</h6>
+                     </div>
+                     <!--Boots Menu-->
+                     <div class="menu level-3">
+                        <h4>Size</h4>
+                        <h6>6 and Under</h6>
+                        <h6>6 to 9</h6>
+                        <h6>10 and Up</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>Lace Type</h4>
+                        <h6>Boa</h6>
+                        <h6>Speed Lace</h6>
+                        <h6>Old Fashioned</h6>
+                     </div>
+                     <div class="menu level-3">
+                        <h4>Color</h4>
+                        <div style="background-color: black; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: gray; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: blue; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: white; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: pink; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: red; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: green; width; 49%; height: 8%; margin: 2px;"></div>
+                        <div style="background-color: yellow; width; 49%; height: 8%; margin: 2px;"></div>
+                     </div>
+                     <!--Bindings Menu-->
+                     <div class="menu level-3">
+                        <h4>Type</h4>
+                        <h6>AllMountain</h6>
+                        <h6>Freestyle</h6>
+                        <h6>Conventional Strap</h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="container-fluid cart-outer-div">
+               <div class="row">
+                  <div class="col-xs-6">
+                     <button onclick="displayCart()" data-toggle="modal" data-target="#myModal" type="button" name="button"><span class="glyphicon glyphicon-shopping-cart"></span> Your Cart</button>
+                  </div>
+                  <div class="col-xs-6">
+                     <button onclick="refreshHomePage()" Class="pull-right" Class="spin" type="button" name="button"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="container-fluid">
+                  <div class="col-xs-12" id="product-container">
+                     <div  id="filter-tree">
+                     </div>
+                     <div id="product-outer-div">
+                        <div class="product-outer-div">
+                           <div class="col-md-4  new-product" id="new-product-1">
+                              <a href="#"><img src="http://content.backcountry.com/promo_upload/bcs/2015/31415/SF1.jpg" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>NEW MARMOT CLOTHING FOR THE NEW SEASON</h3>
+                                    <p>LAYER UP FOR FALL</p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="product-outer-div">
+                           <div class="col-md-4  new-product" id="new-product-1">
+                              <a href="#"><img src="http://content.backcountry.com/promo_upload/bcs/2015/30105/SF1.jpg" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>ALL-NEW BOARDS AND BOOTS FROM BURTON</h3>
+                                    <p>Fresh Rides</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="product-outer-div">
+                           <div class="col-md-4  new-product" id="new-product-1">
+                              <a href="#"><img src="http://walnutcreekcrossfit.com/wp-content/uploads/2013/03/snowboarding-snowboard-powder-turns-pdfcast.jpg" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>BRECK JUST GOT DUMPED</h3>
+                                    <p>Pow Hounds</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="product-outer-div">
+                           <div class="col-md-6  new-product" id="new-product-1">
+                              <a href="#"><img src="http://farm7.static.flickr.com/6112/6327626227_d4ccf809f2_b.jpg" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>TRAVIS RICE LEAVES LIB TECH</h3>
+                                    <p>A Legend Progresses</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="product-outer-div">
+                           <div class="col-md-6  new-product" id="new-product-1">
+                              <a href="#"><img src="https://media.licdn.com/media/p/5/000/29c/32c/1a5f15d.png" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>ROMES NEW SHRED COLLECTION</h3>
+                                    <p>Shred Harder</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="product-outer-div">
+                           <div class="col-md-6  new-product" id="new-product-1">
+                              <a href="#"><img src="http://www.snow.com/~/media/hero%20images/snow/epicpass/vr.5868.bestmountainonepassheroimages_732x253_01a.ashx" alt="" />
+                                 <div class="col-xs-12 new-product-headline">
+                                    <h3>EPIC PASS FOR THE 2015-2016 SEASON</h3>
+                                    <p>Be Prepared</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid brand-div">
+               <div class="row brand-background">
+                  <div class="col-lg-12">
+                     <button onclick="allBrandRand()" class="random-all-button" type="button" name="button"><i class="fa fa-random"></i></button>
+                     <button onclick="startEndRandomizer()" id="random-pause" class="random-all-button" type="button" name="button"><i class="fa fa-pause"></i></button>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="row">
+                        <div class="col-xs-4 brand-borders" id="brand-4">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                        <div class="col-xs-4 brand-borders" id="brand-5">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                        <div class="col-xs-4 brand-borders" id="brand-6">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="row">
+                        <div class="col-xs-4 brand-borders" id="brand-4">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                        <div class="col-xs-4 brand-borders" id="brand-5">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                        <div class="col-xs-4 brand-borders" id="brand-6">
+                           <a href="#" class="brand first-brand"><img src="http://images.evo.com/imgp/1500/68669/352120/burton-clash-snowboard-2014-139.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/burton-flint-snwbrd-jkt-crimson-teamblu-15-1-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://images.the-house.com/boulder-gear-summit-snow-pant-navy-14-prod.jpg" alt="" /></a>
+                           <a href="#" class="brand"><img src="http://content.backcountry.com/images/items/900/RDE/RDE0648/BK.jpg" alt="" /></a>
+                           <a href="#" class="brand final-brand"><img src="http://www.rei.com/zoom/hh/8a948b07-ff0a-4aed-94d9-bb484cd7280a.jpg/440" alt="" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div id="myModal" class="modal fade" role="dialog">
+         <div class="modal-dialog">
+
+            <!-- Modal content-->
+            
+         </div>
+      </div>
+   </div>
+</div>
+<script type="text/javascript" src="itemCatalog.js" charset="utf-8"></script>
+<script type="text/javascript" src="search.js" charset="utf-8"></script>
+<script type="text/javascript" src="app.js" charset="utf-8"></script>
+<script type="text/javascript" src="jsCarousel.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="randomizer.js"></script>
+<script type="text/javascript" src="yourCart.js" charset="utf-8"></script>
+
+</body>
+</html>

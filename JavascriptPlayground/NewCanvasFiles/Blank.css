@@ -1,0 +1,75 @@
+#full-site-wrapper {
+    overflow-x:hidden;
+    width:100%;
+    position:relative;
+}
+
+#all-top-bars {
+   display: none;
+}
+
+#top-bar {
+   background-color: black;
+   min-height: 37px;
+}
+.top-bar p {
+   display: inline-block;
+   padding: 10px;
+   padding-bottom: 0px;
+   color: white;
+   font-size: 12px;
+}
+
+.brand-bar h1 {
+   display: inline-block;
+}
+
+.search-bar {
+   display: inline-block;
+   position: relative;
+   bottom: 7px;
+   background-color: white;
+   border: 1px solid lightgray;
+   border-radius: 10px;
+   width: 50%;
+   min-width: 522px;
+}
+
+.search-bar button,
+.search-bar input {
+   background: none;
+   outline: none;
+   border: none;
+   padding: 10px;
+}
+
+.search-bar input {
+   width: 92%;
+   border-left: 2px solid lightgray;
+   border-radius: 10px;
+}
+
+.navbar-default {
+   margin: 0px;
+}
+
+.nav-dropdown-button {
+   text-align: center;
+   padding: 0px;
+   border-bottom: 2px solid black;
+   display: none;;
+}
+
+.nav-dropdown-button h3 {
+   border-bottom: 2px solid black;
+   border-top: 4px solid black;
+   margin: 0px;
+}
+
+.nav-dropdown-items p {
+   color: black;
+   border-bottom: 1px solid lightgray;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin: 0px;
+}

@@ -1,0 +1,65 @@
+#js-outer-carousel-div {
+   display: none;
+   overflow-x: hidden;
+}
+
+.js-outer-carousel-div {
+   background-color: #D8DAD9;
+   border: 1px solid gray;
+   background-position:bottom;
+   background-attachment: fixed;
+   background-size:cover;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   overflow-x: hidden;
+}
+
+.js-carousel {
+   background-color: black;
+   overflow-x: hidden;
+   display: block;
+   background-attachment: fixed;
+   background-position: center;
+}
+
+.js-carousel img {
+   padding: 0px;
+   margin: 0px;
+   transition-property:transform;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+}
+
+.js-carousel button{
+   z-index: 2;
+   background-color: rgba(99, 99, 99, 0.43);
+   border: 0px;
+   padding: 0px;
+   margin: 0px;
+   vertical-align: middle;
+   text-align: right;
+   color: black;
+   font-size: 24px;
+}
+
+.js-carousel button:focus {
+   outline: none;
+}
+
+
+.js-carousel video {
+   z-index: 1;
+   position: absolute;
+   transition-property: transform;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+
+.js-carousel img,
+.js-carousel button {
+   position: absolute;
+   overflow: hidden;
+   height: 500px;
+}
